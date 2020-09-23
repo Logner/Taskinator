@@ -37,6 +37,8 @@ var createTaskHandler = function(event) {
 
     // send it as an argument to createTaskEl
     createTaskEl(taskDataObj);
+
+    formEl.reset();
   }
 
   formEl.addEventListener("submit", createTaskHandler);
