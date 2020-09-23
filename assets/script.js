@@ -38,6 +38,7 @@ var createTaskHandler = function(event) {
     // send it as an argument to createTaskEl
     createTaskEl(taskDataObj);
 
+    // reset form
     formEl.reset();
   }
 
