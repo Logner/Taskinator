@@ -83,7 +83,7 @@ var completeEditTask = function(taskName, taskType, taskId) {
 
     formEl.removeAttribute("data-task-id");
     document.querySelector("#save-task").textContent = "Add Task";
-    document.querySelector("#save-task").setAttribute('style','background:var(--primary);');
+    document.querySelector("#save-task").removeAttribute('style');
     };
 
 var taskFormHandler = function(event) {
@@ -240,6 +240,11 @@ var taskFormHandler = function(event) {
   pageContentEl.addEventListener("change", taskStatusChangeHandler);
   pageContentEl.addEventListener("dragstart", dragTaskHandler);
   pageContentEl.addEventListener("dragover", dropZoneDragHandler);
+
+  // drop vs dragend???
   pageContentEl.addEventListener("drop", dropTaskHandler);
   pageContentEl.addEventListener("dragleave", dragLeaveHandler);
 
+html.querySelector('header').addEventListener('click', function() {
+  console.log('header clicked!');
+})

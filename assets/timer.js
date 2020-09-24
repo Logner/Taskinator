@@ -10,7 +10,7 @@ var countdown = function() {
     };
 };
 // setInterval (func, milliseconds)
-// why does adding brackets to countdown only trigger the function once.
+// why does adding brackets to countdown() only trigger the function once.
 var startCountdown = setInterval(countdown, 1000);
 
 // setTimeOut counter
